@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoyle Yatzy</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        window.onload = function () {
+            console.log('hoyle world')
+        }
+    </script>
+    <style>
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            padding-inline-start: 5%;
+
+            }
+        li {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        #header{
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .player{
+            background-color: pink;
+            display: flex;
+            margin:auto;
+            align-items: center;
+            width: 25%;
+        }
+        .avatar{
+            width: 40%;
+        }
+        #container{
+            background-color:brown
+        }
+        #score_card{
+            background-color: burlywood;
+            width: 15%;
+        }
+        #dice_board{
+            background-color: royalblue;
+            width: 15%;
+        }   
+    </style>
 </head>
 <body>
-    
+    <div id="header">
+        <div class="player">
+            <img class="avatar" src="images/avatar.png"/>
+            <ul>
+                <li>Player 1</li>
+                <li>Score: 000</li>
+            </ul>
+        </div>
+        <div class="player">
+            <img class="avatar" src="images/avatar.png"/>
+            <ul>
+                <li>Player 2</li>
+                <li>Score: 000</li>
+            </ul>
+        </div>
+    </div>
+    <div id="container">
+        <div id="score_card"> score card</div>
+        <div id="dice_board">dice_board</div>
+    </div>
 </body>
 </html>
