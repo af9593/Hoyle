@@ -11,6 +11,9 @@
         }
     </script>
     <style>
+        body{
+            margin: 0;
+        }
         ul {
             list-style-type: none;
             overflow: hidden;
@@ -26,7 +29,6 @@
             background-color: blueviolet;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
         .player{
             background-color: pink;
@@ -52,6 +54,9 @@
     </style>
 </head>
 <body>
+    <video src="images/dragonbackground.mp4" style="object-fit: contain;position: fixed; margin: auto;" loop muted autoplay></video>
+
+    <div style="position: relative;">
     <div id="header">
         <div class="player">
             <img class="avatar" src="images/avatar.png"/>
@@ -67,10 +72,18 @@
                 <li>Score: 000</li>
             </ul>
         </div>
+        <div class="player">
+            <img class="avatar" src="images/avatar.png"/>
+            <ul>
+                <li>Player 3</li>
+                <li>Score: 000</li>
+            </ul>
+        </div>
     </div>
     <div id="container">
         <div id="score_card"> score card</div>
         <div id="dice_board">dice_board</div>
-    </div>
+    </div> 
+</div>
 </body>
 </html>
