@@ -1,0 +1,28 @@
+body{
+    background-color: beige  ;
+    margin: 10px 10px 0px 10px;
+}
+#header{
+    display:flex;
+    justify-content:center;
+    width: 100%;
+
+}
+.player{
+    max-width: 25%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+}
+.avatar{
+    width: 50%;
+    border-radius:50%;
+}
+.player_info{
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 2%;
+}
