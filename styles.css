@@ -21,8 +21,10 @@ body{
 }
 .player_info{
     width: 50%;
+    margin-left: 2%;
+}
+.player_info p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-left: 2%;
 }
