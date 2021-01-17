@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>HoyleShit</title>
+    <link rel="stylesheet" href="style.css">
+    <!--shake animation-->
+    <style>
+        @keyframes shake {
+            0% {
+                transform: translate(1px, 1px) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(-1px, -2px) rotate(-1deg);
+            }
+
+            20% {
+                transform: translate(-3px, 0px) rotate(1deg);
+            }
+
+            30% {
+                transform: translate(3px, 2px) rotate(0deg);
+            }
+
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+
+            50% {
+                transform: translate(-1px, 2px) rotate(-1deg);
+            }
+
+            60% {
+                transform: translate(-3px, 1px) rotate(0deg);
+            }
+
+            70% {
+                transform: translate(3px, 1px) rotate(-1deg);
+            }
+
+            80% {
+                transform: translate(-1px, -1px) rotate(1deg);
+            }
+
+            90% {
+                transform: translate(1px, 2px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(1px, -2px) rotate(-1deg);
+            }
+        }
+    </style>
+    <!--Body-->
+    <style>
+        body {
+            margin: 0px;
+            background-image: url("images/woodenBackground.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+    <!--Players/header-->
+    <style>
+        /*4 players+score+name*/
+
+        .players {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        /*players image*/
+        .players>div>img {
+            width: 100%;
+            border-radius: 100%;
+            border-style: solid;
+            border-color: rgb(81, 255, 0);
+            box-shadow: 0 10px 30px 0 rgba(0, 255, 34, 0.548), 0 10px 30px 0 rgba(0, 255, 34, 0.507);
+        }
+
+        /*1 player*/
+        .player {
+            width: 7%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+
+        /*player name and score*/
+        .player>a {
+            font-size: 1.5vw;
+            text-align: center;
+        }
+    </style>
+    <!--main-->
+    <style>
+        main {
+            display: flex;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+    </style>
+    <!--paper-->
+    <style>
+        /*score paper*/
+        .paper {
+            border-style: solid;
+          
+        }
+
+        table {
+        
+            border-style: solid;
+            background-color: whitesmoke;
+        }
+
+        table,
+        th,
+        td {
+        
+            border:solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 100%;
+        
+        
+        }
+
+        th,
+        td {
+     
+        
+        }
+
+        th {
+            
+        }
+    </style>
+    <!--box-->
+    <style>
+        /*where you throw the dice*/
+        .box {
+            border-style: solid;
+        }
+
+        .box>img {
+            width: 20%;
+        }
+
+        .box>img:hover {
+            animation: shake 0.8s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+    <!--savedDIce-->
+    <style>
+        /*dice you saved or saving for next round*/
+        .savedDice {
+            border-style: solid;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="players">
+            <div class="player" id="playerOne">
+                <img src="images/face.PNG">
+                <a id="playername1">fnijt fnojt1</a>
+                <a id="score1">score: 1</a>
+            </div>
+            <div class="player" id="playerTwo">
+                <img src="images/face.PNG">
+                <a id="playername2">fnijt fnojt2</a>
+                <a id="score2">score: 2</a>
+            </div>
+            <div class="player" id="playertdree">
+                <img src="images/face.PNG">
+                <a id="playername3">fnijt fnojt3</a>
+                <a id="score3">score: 3</a>
+            </div>
+            <div class="player" id="playerFour">
+                <img src="images/face.PNG">
+                <a id="playername4">fnijt fnojt4</a>
+                <a id="score4">score: 4</a>
+            </div>
+    </header>
+
+    <main>
+
+
+        <div class="paper">
+            <table>
+                <tr>
+                    <th>Upper section</th>
+                    <th>Player 1</th>
+                    <th>Player 2</th>
+                    <th>Player 3</th>
+                    <th>Player 4</th>
+                </tr>
+                <tr>
+                    <th>Aces</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Twos</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>threes</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Fours</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Fives</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Sixes </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Total score </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Bonus</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan="5">Lower section</th>
+                </tr>
+                <tr>
+                    <th>tdree of a kind </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Four of a kind </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Full House </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Small straight</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Large straight</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>YAHTZEE</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Chance</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Grand total</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="box">
+
+            <img src="images/diceCup.png">
+        </div>
+        <div class="savedDice">
+            <a>chosen dice</a>
+        </div>
+    </main>
+
+</body>
+
+</html>
